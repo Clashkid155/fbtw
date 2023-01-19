@@ -12,9 +12,9 @@ def test_fund():
     bal1 = owner().balance()
 
     with reverts():
-        t.fund({"value": 6000000000000000000, "from": owner()})
+        t.fund({"value": int(6000000000000000000), "from": owner()})
     
-    t.fund({"value": 11000000000000000000, "from": owner()})
+    t.fund({"value": int(11000000000000000000), "from": owner()})
 
     bal2 = owner().balance()
 
