@@ -12,11 +12,11 @@ def test_fund():
     bal1 = owner().balance()
 
     with reverts():
-        t.fund({"value": "6 ether", "from": owner()})
+        t.fund({"value": 6000000000000000000, "from": owner()})
     
-    t.fund({"value": "11 ether", "from": owner()})
+    t.fund({"value": 11000000000000000000, "from": owner()})
 
     bal2 = owner().balance()
 
-    assert bal1 - bal2 == "11 ether"
-    assert bal2 == "989 ether"
+    assert bal1 - bal2 == 11000000000000000000
+    assert bal2 == 989000000000000000000
