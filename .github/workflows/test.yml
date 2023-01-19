@@ -19,4 +19,4 @@ jobs:
       # - run: ganache
       - run: brownie pm install OpenZeppelin/openzeppelin-contracts@4.8.0
       - run: brownie compile
-      - run: brownie 
+      - run: brownie test
