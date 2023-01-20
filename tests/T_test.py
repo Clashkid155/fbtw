@@ -1,4 +1,4 @@
-from brownie import accounts, reverts, T, config
+from brownie import accounts, reverts, T, config, Wei
 
 def owner():
     return accounts[0]
