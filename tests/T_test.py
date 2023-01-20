@@ -1,4 +1,4 @@
-from brownie import accounts, reverts, T, config, Wei
+from brownie import accounts, reverts, T, config
 
 def owner():
     return accounts[0]
@@ -12,7 +12,7 @@ def test_fund():
     bal1 = owner().balance()
 
     with reverts():
-        t.fund({"value": Wei("6 ether"), "from": owner()})
+        t.fund({"value": "6 ether", "from": owner()})
     
     t.fund({"value": "11 ether", "from": owner()})
 
