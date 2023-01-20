@@ -3,6 +3,6 @@ pragma solidity ^0.8.14;
 
 contract T {
     function fund() public payable {
-        require(msg.value >= 10 ether, "Minimum fund of 10 Ether!");
+        require(msg.value >= 10 ether, "10 ether");
     }
 }
